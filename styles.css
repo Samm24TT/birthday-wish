@@ -1,0 +1,165 @@
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe5ec;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff9eb5;
+  color: white;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.intro img {
+  width: 60%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.features {
+  padding: 20px;
+  text-align: center;
+}
+
+.features .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  color: #ff6f91;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff6f91;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.card a:hover {
+  background-color: #ff4d6d;
+}
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #ff9eb5;
+  color: white;
+  position: relative;
+}
+
+
+/* gallery's css */
+
+.gallery {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%; /* Make the image width 100% of its container */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image is cropped proportionally */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.gallery img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a more pronounced shadow */
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.videos video {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .intro img {
+    width: 100%;
+  }
+
+  .features .cards {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .gallery img {
+    height: auto;
+  }
+
+  .videos video {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .card a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
